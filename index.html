@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>여행추천</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script defer src="./js/function.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="container">
+				<h1 class="logo"><a href="#">Editor's PICK</a></h1>				
+				<nav>
+					<ul class="gnb">
+						<li class="on"><a href="#">HOME</a></li>
+						<li><a href="#">일본</a></li>
+						<li><a href="#">베트남</a></li>
+						<li><a href="#">작업중</a></li>
+						<li><a href="#">작업중</a></li>
+					</ul>
+					<ul class="gnb-2">
+						<li><a href="#">로그인</a>
+							<div id="login">
+								<form>
+								    <label class="id" for="username">ID</label>
+								    <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+								    <br>
+								    <label class="pw" for="password">Password</label>
+								    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+								    <br>
+									<div class="button-1">
+								    	<button class="submit" type="submit">로그인</button>
+										<button class="exit" type="button">닫기</button>
+									</div>
+								</form>
+						    </div>
+						</li>
+						<li><a href="#">회원가입</a></li>
+					</ul>					
+				</nav>
+			</div>
+		</header>
+		<section>
+			<div class="book">								
+				<article class="slides">
+					<p><img id="screen" src="images/japan_model.jpg" alt="#"><a href="#"><span>현명한 여행의 정석</span><br><span>환상적 여정의 시작</span></a></p>
+					<ul>
+						<li class="on"><a href="images/japan_model.jpg"></a></li>
+						<li><a href="images/ocean.jpg"></a></li>
+						<li><a href="images/japan_sushi.jpg"></a></li>
+						<li><a href="images/hongkong_night.jpg"></a></li>
+						<li><a href="images/thailand_noodle.jpg"></a></li>
+					</ul>
+					<div class="arrow">
+						<a href="#" class="prev">이전</a>
+						<a href="#" class="next">다음</a>
+					</div>
+					<div class="search">
+						<select name="area" id="area">
+							<option value="select" placeholder="">여행지를 선택해주세요</option>
+							<option value="japan">일본</option>
+							<option value="vietnam">베트남</option>
+							<option value="thailand">작업중</option>
+							<option value="philippines">작업중</option>
+						</select>
+						<ul>
+							<li class="start">              
+								<input type="text" name="start" id="start" placeholder="출발일" readonly />
+							</li>
+							<li class="end">                
+								<input type="text" name="end" id="end" placeholder="도착일" readonly />
+							</li>
+						</ul>
+						<button class="searbtn" type="submit">검색하기</button>
+					</div>
+				</div>
+			</div>
+			<div class="page">
+				<article class="japanpage">
+					<p class="jap_bg"><img src="./images/japan_otaru1.jpg" alt="#"></p>
+					<div class="jap_container">
+						<div class="jap_introduce">
+							<p class="jap_flag"><img src="./images/japan_flag.png" alt="#"></p>
+							<p class="jap_name">JAPAN <span>- Hokkaido</span></p>
+							<div class="jap_info">
+								<div id="jap_weather"></div> 
+								<div id="jap_exchangeRate"></div>
+							</div>
+						</div>
+						<div class="jap_description">
+							<div class="jap_desbox">
+								<p><span>홋카이도</span>는 일본 가장 북쪽에 위치한 섬으로, 한국 한자음으로 읽어 북해도라고도 한다.</p>
+								<p><span>주요관광지 :</span> 삿포로, 노보리베츠, 후라노, 레이크토야, 오타루 등</p>
+								<p><span>주요먹거리 :</span> 털게, 미소라멘, 징기스칸, 스시 등</p>
+							</div>
+						</div>
+					</div>
+					<div class="jap_container-2">
+						<p class="jap_desyoutube">YOUTUBE</p>
+						<div class="jap_youtube">유튜브
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/BIlfp-YmzHE?si=sB0rjxPokXl1fI2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+						<p class="jap_sub-1">RECOMMEND</p>
+						<div class="jap_tour">
+							<div class="jap_tourcontainer">
+								<p class="tourbox-1"><img src="./images/japan_sapporo.jpg" alt="#"><a href="#">삿포로</a></p>
+								<p class="tourbox-2"><img src="./images/japan_noboribetsu.jpg" alt="#"><a href="#">노보리베츠</a></p>
+								<p class="tourbox-3"><img src="./images/japan_furano.jpg" alt="#"><a href="#">후라노</a></p>
+								<p class="tourbox-4"><img src="./images/japan_otaru_orgol.jpg" alt="#"><a href="#">오타루</a></p>
+							</div>
+							<div class="jap_article">
+								<div class="sapporo">
+									<h2>SAPPORO</h2>
+									<div class="jap_img1">
+										<div class="sap_thmbimg1">
+											<img src="./images/japan_sapporo_clock.jpg" alt="#">
+										</div>
+										<div class="sap_thmbimg2">
+											<img src="./images/japan_sapporo_market.jpg" alt="#">
+										</div>
+										<div class="sap_thmbimg3">
+											<img src="./images/japan_sapporo_beer.jpg" alt="#">
+										</div>
+									</div>
+									<div class="sap_arti1">
+										<p>
+											일본 가장 북쪽에 위치한 홋카이도를 대표하는 도시, <span>삿포로.</span> <br>
+											여름에는 시원한 날씨로, 겨울에는 아름답게 내리는 눈으로 유명한 곳이다. <br>
+											볼거리와 먹거리도 다양해 관광객들에게 인기 있다. <br>
+											계절에 구애받지 않고 연중 즐길 수 있는 삿포로. <br>
+											맛과 멋을 동시에 담고 있기에 하루 만에 매력을 온전히 느낄 수 있다.
+										</p>
+									</div>
+								</div>
+								<div class="noboribetsu">
+									<h2>NOBORIBETSU</h2>
+									<div class="jap_img2">
+										<div class="nob_thmbimg1">
+											<img src="./images/japan_noboribetsu_hell.jpg" alt="#">
+										</div>
+										<div class="nob_thmbimg2">
+											<img src="./images/japan_noboribetsu_ryokan.jpg" alt="#">
+										</div>
+										<div class="nob_thmbimg3">
+											<img src="./images/japan_noboribetsu_food.jpg" alt="#">
+										</div>
+									</div>
+									<div class="nob_arti1">
+										<p>
+											홋카이도 도오지역에 위치한 <span>노보리베츠</span>시는 일본 유수의 온천지로 알려져 <br>
+											있다. <br>
+											노보리베츠는 그 유명한 지옥계곡을 통해 자연의 힘과 아름다움을 과시하며, <br>
+											방문객들에게는 잊을 수 없는 경험을 선사한다. 또한, 여기에서는 다양한 <br>
+											야생동물을 만나볼 수 있고, 맛있는 세계적인 해산물도 즐길 수 있다.
+										</p>
+									</div>
+								</div>
+								<div class="furano">
+									<h2>FURANO</h2>
+									<div class="jap_img3">
+										<div class="fur_thmbimg1">
+											<img src="./images/japan_furano_img.jpg" alt="#">
+										</div>
+										<div class="fur_thmbimg2">
+											<img src="./images/japan_furano_ski.jpg" alt="#">
+										</div>
+										<div class="fur_thmbimg3">
+											<img src="./images/japan_furano_cheese.jpg" alt="#">
+										</div>
+									</div>
+									<div class="fur_arti1">
+										<p>
+											<span>후라노</span>는 그 아름다운 자연 풍경과 넓은 라벤더 필드로 유명하며, 여름에는 <br>
+											특히 라벤더의 향기가 가득한 곳이다. 겨울에는 화이트 파라다이스로 <br>
+											변모하여 스키와 스노보드 애호가들에게 인기가 있다. <br>
+											또한, 후라노 와인과 치즈를 즐길 수 있는 맛집으로도 알려져 있어, <br>
+											눈과 입맛 모두를 만족시킬 수 있는 훌륭한 여행지이다.
+										</p>
+									</div>
+								</div>
+								<div class="otaru">
+									<h2>OTARU</h2>
+									<div class="jap_img4">
+										<div class="ota_thmbimg1">
+											<img src="./images/japan_otaru_img.jpg" alt="#">
+										</div>
+										<div class="ota_thmbimg2">
+											<img src="./images/japan_otaru_cat.jpg" alt="#">
+										</div>
+										<div class="ota_thmbimg3">
+											<img src="./images/japan_otaru_food.jpg" alt="#">
+										</div>
+									</div>
+									<div class="ota_arti1">
+										<p>
+											<span>오타루</span>는 홋카이도의 서쪽 해안에 위치한 아름다운 항구 도시로, 그 유럽풍의<br> 
+											건축물과 운하가 특징이다. 유리공예와 음악상자로 유명하며, 이들을 <br>
+											제작하는 공방과 상점들이 도시 곳곳에 흩어져 있어 방문객들에게 <br>
+											독특한 경험을 제공한다. <br>
+											또한, 신선한 해산물을 즐길 수 있는 스시 거리와 함께 밤에는 아름다운 등이 <br>
+											도시를 밝히며 로맨틱한 분위기를 만들어낸다.
+										</p>
+									</div>
+								</div>
+							</div>							
+						</div>					
+					</div>					
+				</div>
+				<article class="vietnampage">
+					<p class="vie_bg"><img src="./images/vietnam_danang_beach.jpg" alt="#"></p>
+					<div class="vie_container">
+						<div class="vie_introduce">
+							<p class="vie_flag"><img src="./images/vietnam_flag.png" alt="#"></p>
+							<p class="vie_name">VIETNAM <span>- Danang</span></p>
+							<div class="vie_info">
+								<div id="vie_weather"></div>
+								<div id="vie_exchangeRate"></div>
+							</div>
+						</div>
+						<div class="vie_description">
+							<div class="vie_desbox">
+								<p><span>다낭</span> 비치는 미국 <포브스> 선정 세계 6대 해변 중 하나로 베트남 대표 휴양지다.</p>
+								<p><span>주요관광지 :</span> 미케비치, 다낭대성당, 오행산, 바나 힐, 누이딴타이 등</p>
+								<p><span>주요먹거리 :</span> 반미, 신또, 쩨, 껨, 튀김 등</p>
+							</div>
+						</div>
+					</div>
+					<div class="vie_container-2">
+						<p class="vie_desyoutube">YOUTUBE</p>
+						<div class="vie_youtube">유튜브
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/e06S5qEhnoI?si=5Lchl3VHITb76tZe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						</div>
+						<p class="vie_sub-1">RECOMMEND</p>
+						<div class="vie_tour">
+							<div class="vie_tourcontainer">
+								<p class="tourbox-1"><img src="./images/vietnam_hotel.jpg" alt="#"><a href="#">미케비치</a></p>
+								<p class="tourbox-2"><img src="./images/vietnam_danang_banahill.jpg" alt="#"><a href="#">바나힐</a></p>
+								<p class="tourbox-3"><img src="./images/vietnam_danang_market.jpg" alt="#"><a href="#">헬리오</a></p>
+								<p class="tourbox-4"><img src="./images/vietnam_danang_resort.jpg" alt="#"><a href="#">누이딴타이</a></p>
+							</div>
+							<div class="vie_article">				
+								<div class="sapporo">
+									<h2>SAPPORO</h2>
+									<div class="jap_img1">
+										<div class="sap_thmbimg1">
+											<img src="./images/japan_sapporo_clock.jpg" alt="#">
+										</div>
+										<div class="sap_thmbimg2">
+											<img src="./images/japan_sapporo_market.jpg" alt="#">
+										</div>
+										<div class="sap_thmbimg3">
+											<img src="./images/japan_sapporo_beer.jpg" alt="#">
+										</div>
+									</div>
+									<div class="sap_arti1">
+										<p>
+											일본 가장 북쪽에 위치한 홋카이도를 대표하는 도시, <span>삿포로.</span> <br>
+											여름에는 시원한 날씨로, 겨울에는 아름답게 내리는 눈으로 유명한 곳이다. <br>
+											볼거리와 먹거리도 다양해 관광객들에게 인기 있다. <br>
+											계절에 구애받지 않고 연중 즐길 수 있는 삿포로. <br>
+											맛과 멋을 동시에 담고 있기에 하루 만에 매력을 온전히 느낄 수 있다.
+										</p>
+									</div>
+								</div>
+								<div class="noboribetsu">
+									<h2>NOBORIBETSU</h2>
+									<div class="jap_img2">
+										<div class="nob_thmbimg1">
+											<img src="./images/japan_noboribetsu_hell.jpg" alt="#">
+										</div>
+										<div class="nob_thmbimg2">
+											<img src="./images/japan_noboribetsu_ryokan.jpg" alt="#">
+										</div>
+										<div class="nob_thmbimg3">
+											<img src="./images/japan_noboribetsu_food.jpg" alt="#">
+										</div>
+									</div>
+									<div class="nob_arti1">
+										<p>
+											홋카이도 도오지역에 위치한 <span>노보리베츠</span>시는 일본 유수의 온천지로 알려져 <br>
+											있다. <br>
+											노보리베츠는 그 유명한 지옥계곡을 통해 자연의 힘과 아름다움을 과시하며, <br>
+											방문객들에게는 잊을 수 없는 경험을 선사한다. 또한, 여기에서는 다양한 <br>
+											야생동물을 만나볼 수 있고, 맛있는 세계적인 해산물도 즐길 수 있다.
+										</p>
+									</div>
+								</div>
+								<div class="furano">
+									<h2>FURANO</h2>
+									<div class="jap_img3">
+										<div class="fur_thmbimg1">
+											<img src="./images/japan_furano_img.jpg" alt="#">
+										</div>
+										<div class="fur_thmbimg2">
+											<img src="./images/japan_furano_ski.jpg" alt="#">
+										</div>
+										<div class="fur_thmbimg3">
+											<img src="./images/japan_furano_cheese.jpg" alt="#">
+										</div>
+									</div>
+									<div class="fur_arti1">
+										<p>
+											<span>후라노</span>는 그 아름다운 자연 풍경과 넓은 라벤더 필드로 유명하며, 여름에는 <br>
+											특히 라벤더의 향기가 가득한 곳이다. 겨울에는 화이트 파라다이스로 <br>
+											변모하여 스키와 스노보드 애호가들에게 인기가 있다. <br>
+											또한, 후라노 와인과 치즈를 즐길 수 있는 맛집으로도 알려져 있어, <br>
+											눈과 입맛 모두를 만족시킬 수 있는 훌륭한 여행지이다.
+										</p>
+									</div>
+								</div>
+								<div class="otaru">
+									<h2>OTARU</h2>
+									<div class="jap_img4">
+										<div class="ota_thmbimg1">
+											<img src="./images/japan_otaru_img.jpg" alt="#">
+										</div>
+										<div class="ota_thmbimg2">
+											<img src="./images/japan_otaru_cat.jpg" alt="#">
+										</div>
+										<div class="ota_thmbimg3">
+											<img src="./images/japan_otaru_food.jpg" alt="#">
+										</div>
+									</div>
+									<div class="ota_arti1">
+										<p>
+											<span>오타루</span>는 홋카이도의 서쪽 해안에 위치한 아름다운 항구 도시로, 그 유럽풍의<br> 
+											건축물과 운하가 특징이다. 유리공예와 음악상자로 유명하며, 이들을 <br>
+											제작하는 공방과 상점들이 도시 곳곳에 흩어져 있어 방문객들에게 <br>
+											독특한 경험을 제공한다. <br>
+											또한, 신선한 해산물을 즐길 수 있는 스시 거리와 함께 밤에는 아름다운 등이 <br>
+											도시를 밝히며 로맨틱한 분위기를 만들어낸다.
+										</p>
+									</div>
+								</div>
+							</div>							
+						</div>					
+					</div>					
+				</div>
+									
+			</div>
+		</section>
+		<footer>
+			<address>COPYRIGHTⓒ KWANG NAM CHO All rights reserved ㅣ Designed by KNC in Republic of Korea</address>
+		</footer>
+		
+		<aside>
+			<a href="#" class="top">TOP</a>
+		</aside>
+	</div>
+
+</body>
+</html>
